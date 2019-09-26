@@ -13,16 +13,16 @@ services:
     networks:
       - mynet
   app:
-    imge: ubuntu:latest
+    image: ubuntu:latest
     command: ["tail", "-f", "/dev/null"]
   redis:
-    image: redis:4.0.11-alpine
+    imge: redis:4.0.11-alpine
     networks:
       - mynet
-    volumes:
+    volume:
       - mydata:/data
 
-networks:
+network:
   mynet:
 volumes:
   mydata:
