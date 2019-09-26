@@ -1,6 +1,6 @@
 version: '3'
 
-service:
+services:
   app:
     build: 
       context: .
@@ -13,7 +13,7 @@ service:
     networks:
       - mynet
   app:
-    image: ubuntu:latest
+    imge: ubuntu:latest
     command: ["tail", "-f", "/dev/null"]
   redis:
     image: redis:4.0.11-alpine
