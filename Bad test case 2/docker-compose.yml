@@ -12,7 +12,8 @@ services:
       - 80:5000
     networks:
       - mynet
-  app:
+  app2:
+    image: ubuntu:latest
     image: ubuntu:latest
     command: ["tail", "-f", "/dev/null"]
   redis:
